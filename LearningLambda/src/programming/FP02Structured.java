@@ -2,6 +2,7 @@ package programming;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class FP02Structured {
     public static void main(String[] args){
@@ -19,10 +20,9 @@ public class FP02Structured {
         return numbers.stream()
                 .reduce(0, (x, y) -> x + y); // 스트림의 요소를 하나의 결과로 요약 여기서 0은 x, y는 numbers의 요소
     }
-    private List<Integer> sortList(List<Integer> numbers) {
+    private static List<Integer> doubleList(List<Integer> numbers) {
         return numbers.stream()
-                .distinct()
-                .sorted()
-                .toList();
+                .map(x -> x * x)
+                .collect(Collectors.toList());
     }
 }

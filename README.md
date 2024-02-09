@@ -10,3 +10,4 @@ stream()
         .distinct() : 중복 제거
         .sorted() : 정렬 ()안에 Comparator.naturalOrder()는 오름차순 , Comparator.reverseOrder()는 내림차순
         .forEach(x -> System.out.println(x)) : 데이터 출력, x를 받아서 출력
+        .collect(Collectors.toList()) : List 형식으로 반환
